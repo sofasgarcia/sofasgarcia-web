@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Galería de Productos - Tapicería Zaragoza</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0e121b] dark:text-white overflow-x-hidden">
+    <nav
+        class="sticky top-0 z-50 w-full border-b border-teal-600 bg-teal-ral text-white backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 transition-all duration-300">
+                <div class="flex items-center gap-3">
+                    <img src="https://res.cloudinary.com/dhdphvgqe/image/upload/f_auto,q_auto/web-home-logotipo-menu-navegador_v2"
+                        alt="Logotipo Sofás García" class="h-12 w-auto object-contain">
+                    <div>
+                        <h1 class="text-lg font-bold leading-none tracking-tight text-white">Sofás García</h1>
+                        <p class="text-xs text-white font-medium">Tapicería desde 2017</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-base font-semibold hover:text-primary transition-colors" href="index.html">Inicio</a>
+                    <a class="text-base font-semibold hover:text-primary transition-colors"
+                        href="gallery.html">Galería</a>
+                    <a class="text-base font-semibold hover:text-primary transition-colors" href="about_us.html">Sobre
+                        Nosotros</a>
+                    <a class="text-base font-semibold hover:text-primary transition-colors"
+                        href="contact.html">Contacto</a>
+                </div>
+                <div class="flex md:hidden">
+                    <button class="text-gray-700 dark:text-white p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content Area -->
+    <main class="layout-container flex flex-col items-center w-full min-h-screen">
+        <!-- PageHeading -->
+        <div class="w-full px-5 md:px-10 lg:px-40 flex justify-center py-10 md:py-14 bg-white dark:bg-[#1a202c]">
+            <div class="flex flex-col w-full max-w-[1200px]">
+                <!-- Intro for 'Todo' -->
+                <div id="intro-todo"
+                    class="flex flex-col gap-6 text-center md:text-left transition-opacity duration-300">
+                    <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Nuestra Colección</h1>
+                    <p class="text-[#4e6797] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-3xl">
+                        Descubre una selección de nuestros trabajos de tapicería y fabricación a medida en Zaragoza.
+                        Sofás, sillones, restauraciones y proyectos personalizados realizados cuidando cada detalle, los
+                        materiales y el confort final.
+                    </p>
+                </div>
+                <!-- Dynamic Category Content -->
+                <div id="dynamic-category-content" class="w-full hidden">
+                    <!-- Templates for JS to populate or Toggle visibility -->
+                    <!-- Content: Sofas -->
+                    <div id="content-sofas-a-medida"
+                        class="hidden flex flex-col gap-6 text-center md:text-left animate-fade-in">
+                        <h2 class="text-3xl md:text-4xl font-black text-[#0e121b] dark:text-white leading-tight">Sofás
+                            diseñados para tu espacio</h2>
+                        <div
+                            class="text-[#4e6797] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-3xl space-y-4">
+                            <p>En Sofás García fabricamos sofás pensados para adaptarse a la realidad de cada hogar. No
+                                trabajamos con medidas estándar ni soluciones cerradas: cada sofá se diseña teniendo en
+                                cuenta el espacio disponible, el uso diario y las preferencias de cada cliente.</p>
+                            <p>Fabricamos distintos tipos de sofás y composiciones, siempre con posibilidad de
+                                personalización en medidas, confort y acabados. Nuestro objetivo es que el sofá encaje
+                                en tu casa y en tu forma de vivirla, no al revés.</p>
+                            <p>Diseñamos sofás clásicos, chaise longues, modulares, rinconeras, sofás relax y sofás
+                                cama, ajustando cada detalle para conseguir un resultado cómodo, funcional y duradero.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Content: Sillones -->
+                    <div id="content-sillones"
+                        class="hidden flex flex-col gap-6 text-center md:text-left animate-fade-in">
+                        <h2 class="text-3xl md:text-4xl font-black text-[#0e121b] dark:text-white leading-tight">
+                            Sillones cómodos y funcionales</h2>
+                        <div
+                            class="text-[#4e6797] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-3xl space-y-4">
+                            <p>Fabricamos sillones individuales pensados para el descanso diario. Adaptamos la sentada,
+                                el respaldo y las proporciones para que resulten cómodos y se integren bien en el
+                                espacio.</p>
+                            <p>Trabajamos diferentes estilos y acabados, cuidando siempre el confort y la durabilidad,
+                                tanto si se trata de un sillón principal como de una pieza de apoyo junto al sofá.</p>
+                        </div>
+                    </div>
+                    <!-- Content: Retapizados -->
+                    <div id="content-retapizados"
+                        class="hidden flex flex-col gap-6 text-center md:text-left animate-fade-in">
+                        <h2 class="text-3xl md:text-4xl font-black text-[#0e121b] dark:text-white leading-tight">
+                            Retapizado y renovación de muebles</h2>
+                        <div
+                            class="text-[#4e6797] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-3xl space-y-4">
+                            <p>Damos una segunda vida a muebles que merecen conservarse. Retapizamos sofás, sillones y
+                                otras piezas, renovando tejidos, espumas y confort, manteniendo la estructura original
+                                cuando está en buen estado.</p>
+                            <p>Es una solución práctica para actualizar un mueble, mejorar su comodidad y adaptarlo a un
+                                nuevo estilo sin necesidad de sustituirlo.</p>
+                        </div>
+                    </div>
+                    <!-- Content: Sillas -->
+                    <div id="content-sillas"
+                        class="hidden flex flex-col gap-6 text-center md:text-left animate-fade-in">
+                        <h2 class="text-3xl md:text-4xl font-black text-[#0e121b] dark:text-white leading-tight">
+                            Retapizado de sillas y sillería</h2>
+                        <div
+                            class="text-[#4e6797] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-3xl space-y-4">
+                            <p>Realizamos trabajos de tapicería en sillas y piezas de sillería, cuidando tanto la
+                                estética como la comodidad. Renovamos tapizados y acolchados, adaptando el acabado al
+                                uso actual y al entorno donde se va a utilizar.</p>
+                        </div>
+                    </div>
+                    <!-- Content: Cabeceros -->
+                    <div id="content-cabeceros"
+                        class="hidden flex flex-col gap-6 text-center md:text-left animate-fade-in">
+                        <h2 class="text-3xl md:text-4xl font-black text-[#0e121b] dark:text-white leading-tight">
+                            Cabeceros tapizados a medida</h2>
+                        <div
+                            class="text-[#4e6797] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-3xl space-y-4">
+                            <p>Diseñamos y fabricamos cabeceros tapizados adaptados al tamaño de la cama y al estilo del
+                                dormitorio. Trabajamos diferentes acolchados, tejidos y acabados para crear piezas
+                                cómodas, resistentes y decorativas.</p>
+                        </div>
+                    </div>
+                    <!-- Content: Automocion -->
+                    <div id="content-automocion"
+                        class="hidden flex flex-col gap-6 text-center md:text-left animate-fade-in">
+                        <h2 class="text-3xl md:text-4xl font-black text-[#0e121b] dark:text-white leading-tight">
+                            Tapicería para moto</h2>
+                        <div
+                            class="text-[#4e6797] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-3xl space-y-4">
+                            <p>Realizamos trabajos de tapicería en sillas de moto, mejorando tanto la comodidad como el
+                                acabado. Utilizamos materiales resistentes y adecuados para el uso exterior, cuidando
+                                siempre el resultado final.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Visual Block: Artisan Process Image -->
+        <div id="gallery-hero-image" class="w-full overflow-hidden transition-opacity duration-300">
+            <img src="images/artisan_header.png" alt="Detalle de proceso artesanal de tapicería"
+                class="w-full h-[35vh] object-cover" />
+        </div>
+        <!-- Text-based Filters -->
+        <div class="w-full px-5 md:px-10 lg:px-40 flex justify-center py-6 bg-background-light dark:bg-background-dark">
+            <div class="flex flex-col w-full max-w-[1200px]">
+                <div class="flex gap-6 overflow-x-auto pb-2 no-scrollbar items-center">
+                    <button data-filter="todo"
+                        class="filter-link text-sm font-bold text-[#0e121b] dark:text-white border-b-2 border-teal-ral pb-1 transition-all hover:text-teal-ral dark:hover:text-teal-400">
+                        Todo
+                    </button>
+                    <span class="text-gray-400">·</span>
+                    <button data-filter="sofas-a-medida"
+                        class="filter-link text-sm font-normal text-[#4e6797] dark:text-gray-400 border-b-2 border-transparent pb-1 transition-all hover:text-teal-ral dark:hover:text-teal-400">
+                        Sofás a medida
+                    </button>
+                    <span class="text-gray-400">·</span>
+                    <button data-filter="sillones"
+                        class="filter-link text-sm font-normal text-[#4e6797] dark:text-gray-400 border-b-2 border-transparent pb-1 transition-all hover:text-teal-ral dark:hover:text-teal-400">
+                        Sillones
+                    </button>
+                    <span class="text-gray-400">·</span>
+                    <button data-filter="retapizados"
+                        class="filter-link text-sm font-normal text-[#4e6797] dark:text-gray-400 border-b-2 border-transparent pb-1 transition-all hover:text-teal-ral dark:hover:text-teal-400">
+                        Retapizados
+                    </button>
+                    <span class="text-gray-400">·</span>
+                    <button data-filter="sillas"
+                        class="filter-link text-sm font-normal text-[#4e6797] dark:text-gray-400 border-b-2 border-transparent pb-1 transition-all hover:text-teal-ral dark:hover:text-teal-400">
+                        Sillas
+                    </button>
+                    <span class="text-gray-400">·</span>
+                    <button data-filter="cabeceros"
+                        class="filter-link text-sm font-normal text-[#4e6797] dark:text-gray-400 border-b-2 border-transparent pb-1 transition-all hover:text-teal-ral dark:hover:text-teal-400">
+                        Cabeceros
+                    </button>
+                    <span class="text-gray-400">·</span>
+                    <button data-filter="automocion"
+                        class="filter-link text-sm font-normal text-[#4e6797] dark:text-gray-400 border-b-2 border-transparent pb-1 transition-all hover:text-teal-ral dark:hover:text-teal-400">
+                        Automoción
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery Grid - Category Images -->
+        <div class="w-full px-5 md:px-10 lg:px-40 flex justify-center pb-20">
+            <div class="w-full max-w-[1200px]">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Sofás a medida -->
+                    <button data-filter-trigger="sofas-a-medida"
+                        class="category-image block group cursor-pointer relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD14TDQtvQTwaQ4vM2WffRTSwZY_Ambry87CAO3EDffmo-BpYBEIgI-UqMk1iMMjJQyBQIhPhf69eJXiXbUc2DXOYop16F4d2EYt1ABjNYwEjkGi44U2o0yBgLFM1RnUaEkpYQTks8uUnQYwZE6OSw4TCYodMzh-18YYpQmlidNevJuJ2rbr55JyLeqrRcHuBDcCNodQf8nTSpuK0ysTbHn4wvi24pYbGrm174__Sqo92XraxX9qoXKvr0PxfgPrX_xSkNj3K0qoyw');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <p class="text-white font-bold text-lg">Sofás a medida</p>
+                        </div>
+                    </button>
+                    <!-- Sillones -->
+                    <button data-filter-trigger="sillones"
+                        class="category-image block group cursor-pointer relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDeLnJSS8dLfQz1yz4lrWby_x-JVX3l15WCLxEg9ocR4pV5qZ9QWwmi1Wt2bE5QqswEWv4zVbvh-E5uOPEbW_90s4qNi4VpiWrTOLHx_DJx3uViTDwj_WCbSNGCVo9EV0yHHERCPtzjI7XVRzn_C879dxGpDedpLbj_u_2pMXLk9jx81u_xmAQ4NMvsIQkXC7JNkh1k6ciN_flAqMa8vWpgs6ozExBytKszLXgnt3tkDpItq2YOJdpLFlYtFUqdjuUbCiATqvbgfIo');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <p class="text-white font-bold text-lg">Sillones</p>
+                        </div>
+                    </button>
+                    <!-- Retapizados -->
+                    <button data-filter-trigger="retapizados"
+                        class="category-image block group cursor-pointer relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmfqQ3am-I-99dAQhEieovCzkVt3st5rPdRyfe-tZmIMNQtj--Cs8MgyaLLvuGoeyqunmkSIgdAi1dlgxXCo4cB_4om6WiSSKljbcpw1_aO68G1XTds0VYktWjoGCmQqwHEm8ygiQpBZQeUApcqNjAw9vKytbwG-5sYpC2jdHZE3toLmO6ecr0RBxcSWAqShqw89A7iuujcFgdj3KSnEUet-L19JXfeVSKpJNv4SuzPf-QdkWKR_6QBtCt8NzdWoSFzP5r6HNBX2w');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <p class="text-white font-bold text-lg">Retapizados</p>
+                        </div>
+                    </button>
+                    <!-- Sillas -->
+                    <button data-filter-trigger="sillas"
+                        class="category-image block group cursor-pointer relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style="background-image: url('https://via.placeholder.com/600x450/e0e0e0/666666?text=Sillas');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <p class="text-white font-bold text-lg">Sillas</p>
+                        </div>
+                    </button>
+                    <!-- Cabeceros -->
+                    <button data-filter-trigger="cabeceros"
+                        class="category-image block group cursor-pointer relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChDyQlkIoqw1p3x6MPgSscPAYO33lOFFfUGyZ0xpN-gBV-SI3_Out_W_2dniH40SbEormNvT8WFfTeRBJS7okygM6l3roAwcpL7tsihamY6M0iH2g_aEqx4Psn4Do7TBsaGKxi_fqnBraYuwuy3oXus3w5AP0w99IsKoQAqFuLDRzpDqM-x3s387RvRV0ToVYa2Yx_LPB9jj4rGtuhpzsWYkHUJ20skTE9hqxhWFjhzxpPi11axpH3b3eQmX6jMBkEPTWD_8ezLEc');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <p class="text-white font-bold text-lg">Cabeceros</p>
+                        </div>
+                    </button>
+                    <!-- Automoción -->
+                    <button data-filter-trigger="automocion"
+                        class="category-image block group cursor-pointer relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style="background-image: url('https://via.placeholder.com/600x450/e0e0e0/666666?text=Automoci%C3%B3n');">
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <p class="text-white font-bold text-lg">Automoción</p>
+                        </div>
+                    </button>
+                </div>
+                <!-- Pagination / Load More -->
+                <div id="load-more-btn" class="hidden justify-center mt-12 mb-8">
+                    <button
+                        class="flex items-center gap-2 px-8 py-3 bg-white dark:bg-[#2d3748] border border-[#e7ebf3] dark:border-[#4a5568] rounded-full text-sm font-bold text-[#0e121b] dark:text-white shadow-sm hover:shadow-md hover:border-primary/50 transition-all">
+                        <span class="material-symbols-outlined">refresh</span>
+                        Cargar más proyectos
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Highlighted Text Block (General for Todo) -->
+        <div id="footer-todo">
+            <div class="w-full px-5 md:px-10 lg:px-40 flex justify-center py-24 bg-[#e7ebf3] dark:bg-[#1a202e]">
+                <div class="w-full max-w-[900px] text-center flex flex-col gap-8">
+                    <h2 class="text-3xl md:text-4xl font-black text-[#0e121b] dark:text-white leading-tight">
+                        Diseño, tapicería y confort a medida
+                    </h2>
+                    <div class="text-lg md:text-xl text-[#0e121b] dark:text-gray-300 leading-relaxed space-y-6">
+                        <p>
+                            En Sofás García realizamos trabajos de tapicería artesanal y fabricación a medida, adaptando
+                            cada pieza al espacio, al uso y a las necesidades reales de cada cliente.
+                        </p>
+                        <p>
+                            Fabricamos sofás a medida, retapizamos sillones y sillas, diseñamos cabeceros tapizados y
+                            realizamos trabajos de tapicería especializada, incluida automoción. Cada proyecto se
+                            trabaja de forma individual, cuidando materiales, acabados y confort.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Services Summary Line -->
+            <div class="w-full py-8 bg-teal-ral text-white border-t border-teal-700">
+                <div class="max-w-[1280px] mx-auto px-4 text-center">
+                    <p class="text-lg md:text-xl font-bold tracking-wide flex flex-wrap justify-center gap-x-6 gap-y-2">
+                        <span>✔ Sofás a medida</span>
+                        <span>✔ Sillones</span>
+                        <span>✔ Retapizados</span>
+                        <span>✔ Sillas</span>
+                        <span>✔ Cabeceros</span>
+                        <span>✔ Automoción</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-black border-t border-gray-100 dark:border-gray-800 pt-16 pb-8 w-full">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-[#0e121b] dark:text-white">
+                            <img src="https://res.cloudinary.com/dhdphvgqe/image/upload/f_auto,q_auto/web_home_logotipo"
+                                alt="Logotipo Sofás García" class="h-8 w-auto object-contain">
+                            <span class="text-lg font-bold">Sofás García</span>
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed">
+                            Artesanos del confort desde 2017. Transformamos espacios con tejidos de calidad y manos
+                            expertas.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-4">Enlaces Rápidos</h4>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li><a class="hover:text-primary transition-colors" href="index.html">Inicio</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="about_us.html">Sobre
+                                    Nosotros</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="gallery.html">Galería</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="contact.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-4">Servicios</h4>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li><a class="hover:text-primary transition-colors" href="#">Restauración</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Retapizado</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Limpieza de Tapicería</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Proyectos Contract</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-4">Contacto</h4>
+                        <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+                                <span>Calle Maria Moliner esquina con calle Lausana,<br />50007 Zaragoza, España</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">call</span>
+                                <span>641 10 28 43</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                                <span>sofasjaviergarcia@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-xs text-gray-400">© 2023 Tapicería Artesana Zaragoza. Todos los derechos reservados.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#">
+                            <span class="sr-only">Facebook</span>
+                            <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#">
+                            <span class="sr-only">Instagram</span>
+                            <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.48 2h-.165zm-2.37 6.315a5.704 5.704 0 1011.4 0 5.704 5.704 0 00-11.4 0zm1.85 5.705a3.854 3.854 0 117.708 0 3.854 3.854 0 01-7.708 0zm6.54-7.538a1.11 1.11 0 100 2.22 1.11 1.11 0 000-2.22z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

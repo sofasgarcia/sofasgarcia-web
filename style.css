@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Global Color Utilities */
+:root {
+    --teal-ral: #00747d;
+}
+
+.bg-teal-ral {
+    background-color: var(--teal-ral) !important;
+}
+
+.text-teal-ral {
+    color: var(--teal-ral) !important;
+}
+
+.border-teal-ral {
+    border-color: var(--teal-ral) !important;
+}
