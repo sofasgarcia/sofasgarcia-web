@@ -47,7 +47,7 @@ section {
 /* HERO SECTION */
 .hero {
     background-color: #0f172a;
-    background-image: url('https://res.cloudinary.com/dhdphvgqe/image/upload/f_auto,q_auto/web-home-hero-sofa-zaragoza');
+    background-image: url('https://res.cloudinary.com/dhdphvgqe/image/upload/f_auto,q_auto/home/home/web-home-hero-sofa-zaragoza');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -453,7 +453,7 @@ section {
 
 /* DEL TALLER A TU CASA SECTION */
 .taller-section {
-    background-image: url('https://res.cloudinary.com/dhdphvgqe/image/upload/f_auto,q_auto,w_2400/web-home-hero-taller-casa.jpg');
+    background-image: url('https://res.cloudinary.com/dhdphvgqe/image/upload/f_auto,q_auto,w_2400/home/home/web-home-hero-taller-casa.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
