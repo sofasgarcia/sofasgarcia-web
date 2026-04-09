@@ -99,13 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update filter button states
         filterButtons.forEach(btn => {
             btn.classList.remove('font-bold', 'text-[#0e121b]', 'dark:text-white', 'border-teal-ral');
-            btn.classList.add('font-normal', 'text-[#4e6797]', 'dark:text-gray-400', 'border-transparent');
+            btn.classList.add('font-medium', 'text-[#4e6797]', 'dark:text-gray-400', 'border-transparent');
         });
 
         // Find and activate the matching filter button
         const targetFilterBtn = document.querySelector(`[data-filter="${categoryId}"]`);
         if (targetFilterBtn) {
-            targetFilterBtn.classList.remove('font-normal', 'text-[#4e6797]', 'dark:text-gray-400', 'border-transparent');
+            targetFilterBtn.classList.remove('font-medium', 'text-[#4e6797]', 'dark:text-gray-400', 'border-transparent');
             targetFilterBtn.classList.add('font-bold', 'text-[#0e121b]', 'dark:text-white', 'border-teal-ral');
         }
 
