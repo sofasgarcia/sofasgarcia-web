@@ -44,11 +44,11 @@ var GALLERY_CATEGORIES = [
   {
     id: 'sofas',
     label: 'Sofás',
-    tags: ['sofa-2-plazas', 'sofa-3-plazas', 'sofa_chaise-longue', 'sofa-rinconera'],
+    tags: ['sofa-2-plazas', 'sofa-3-plazas', 'sofa-chaise-longue', 'sofa-rinconera'],
     subcategories: [
       { id: 'sofa-2-plazas',       label: '2 plazas' },
       { id: 'sofa-3-plazas',       label: '3 plazas' },
-      { id: 'sofa_chaise-longue',  label: 'Chaise longue' },
+      { id: 'sofa-chaise-longue',  label: 'Chaise longue' },
       { id: 'sofa-rinconera',      label: 'Rinconeras' }
     ]
   },
@@ -60,7 +60,7 @@ var GALLERY_CATEGORIES = [
   {
     id: 'retapizado',
     label: 'Retapizado',
-    tags: ['silla', 'sofa-2-plazas', 'sofa-3-plazas', 'sofa_chaise-longue', 'sofa-rinconera'],
+    tags: ['silla', 'sofa-2-plazas', 'sofa-3-plazas', 'sofa-chaise-longue', 'sofa-rinconera'],
     subcategories: [],
     hidden: true
   }
