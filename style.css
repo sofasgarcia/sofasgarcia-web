@@ -61,3 +61,13 @@ body {
         height: 28px;
     }
 }
+
+/* Mobile Menu Animation */
+#mobile-menu-overlay:not(.hidden) > div {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}

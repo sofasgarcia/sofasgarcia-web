@@ -40,10 +40,26 @@
                         href="contact.html">Contacto</a>
                 </div>
                 <div class="flex md:hidden">
-                    <button class="text-gray-700 dark:text-white p-2">
-                        <span class="material-symbols-outlined">menu</span>
+                    <button id="mobile-menu-btn" class="text-white p-2">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
                     </button>
                 </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] hidden">
+            <div class="absolute right-0 top-0 h-full w-64 bg-teal-ral shadow-2xl p-6 flex flex-col gap-6 animate-in slide-in-from-right duration-300">
+                <div class="flex justify-end">
+                    <button id="close-menu-btn" class="text-white p-2">
+                        <span class="material-symbols-outlined text-3xl">close</span>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-4">
+                    <a class="text-xl font-bold text-white border-b border-white/10 pb-2" href="index.html">Inicio</a>
+                    <a class="text-xl font-bold text-white border-b border-white/10 pb-2" href="gallery.html">Galería</a>
+                    <a class="text-xl font-bold text-white border-b border-white/10 pb-2" href="about_us.html">Sobre Nosotros</a>
+                    <a class="text-xl font-bold text-white border-b border-white/10 pb-2" href="contact.html">Contacto</a>
+                </nav>
             </div>
         </div>
     </nav>

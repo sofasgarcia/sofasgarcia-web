@@ -210,10 +210,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll to "Nuestros trabajos" section
     const scrollToWorksBtn = document.getElementById('scrollToWorksBtn');
     const worksSection = document.getElementById('nuestros-trabajos');
-
     if (scrollToWorksBtn && worksSection) {
         scrollToWorksBtn.addEventListener('click', () => {
             worksSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    if (mobileMenuBtn && closeMenuBtn && mobileMenuOverlay) {
+        const toggleMenu = (show) => {
+            if (show) {
+                mobileMenuOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenuOverlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        };
+
+        mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+        closeMenuBtn.addEventListener('click', () => toggleMenu(false));
+        mobileMenuOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileMenuOverlay) toggleMenu(false);
         });
     }
 

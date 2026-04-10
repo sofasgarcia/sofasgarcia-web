@@ -301,8 +301,8 @@ section {
 
 @media (max-width: 768px) {
     .advantages-section {
-        padding-top: 36px;
-        padding-bottom: 20px;
+        padding-top: 24px;
+        padding-bottom: 12px;
     }
 }
 
@@ -520,16 +520,16 @@ section {
 
 @media (max-width: 768px) {
     .taller-section {
-        padding: 48px 0;
+        padding: 24px 0;
         min-height: auto;
     }
 
     .taller-content {
         max-width: 100%;
-        text-align: left;
-        background: rgba(255, 255, 255, 0.85);
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
         /* Readability on mobile */
-        padding: 24px;
+        padding: 20px;
         border-radius: 16px;
     }
 
