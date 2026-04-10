@@ -380,23 +380,25 @@
             </div>
         </div>
         <!-- Footer -->
-        <footer class="bg-white dark:bg-black border-t border-gray-100 dark:border-gray-800 pt-10 pb-6 w-full">
+        <footer class="bg-white dark:bg-black border-t border-gray-100 dark:border-gray-800 pt-8 pb-4 w-full">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <!-- Logo & Info -->
                     <div class="flex flex-col gap-3">
                         <div class="flex items-center gap-2 text-[#0e121b] dark:text-white">
                             <img src="https://res.cloudinary.com/dhdphvgqe/image/upload/f_auto,q_auto/web_home_logotipo"
                                 alt="Logotipo Sofás García" class="h-7 w-auto object-contain">
                             <span class="text-lg font-bold">Sofás García</span>
                         </div>
-                        <p class="text-sm text-gray-500 leading-relaxed">
+                        <p class="text-sm text-gray-500 leading-relaxed max-w-xs">
                             Artesanos del confort desde 2017. Transformamos espacios con tejidos de calidad y manos
                             expertas.
                         </p>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-2.5">Enlaces Rápidos</h4>
-                        <ul class="space-y-1.5 text-sm text-gray-500 dark:text-gray-400">
+                    <!-- Column: Quick Links (Hidden on Mobile) -->
+                    <div class="hidden md:block">
+                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-2">Enlaces Rápidos</h4>
+                        <ul class="space-y-1 text-sm text-gray-500 dark:text-gray-400 font-light">
                             <li><a class="hover:text-primary transition-colors" href="index.html">Inicio</a></li>
                             <li><a class="hover:text-primary transition-colors" href="about_us.html">Sobre
                                     Nosotros</a></li>
@@ -404,21 +406,23 @@
                             <li><a class="hover:text-primary transition-colors" href="contact.html">Contacto</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-2.5">Servicios</h4>
-                        <ul class="space-y-1.5 text-sm text-gray-500 dark:text-gray-400">
-                            <li><a class="hover:text-primary transition-colors" href="#">Restauración</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Retapizado</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Limpieza de Tapicería</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Proyectos Contract</a></li>
+                    <!-- Column: Services (Hidden on Mobile) -->
+                    <div class="hidden md:block">
+                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-2">Servicios</h4>
+                        <ul class="space-y-1 text-sm text-gray-500 dark:text-gray-400 font-light">
+                            <li>Restauración</li>
+                            <li>Retapizado</li>
+                            <li>Limpieza de Tapicería</li>
+                            <li>Proyectos Contract</li>
                         </ul>
                     </div>
+                    <!-- Column: Contact -->
                     <div>
-                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-2.5">Contacto</h4>
-                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                        <h4 class="font-bold text-[#0e121b] dark:text-white mb-2 md:mb-2.5">Contacto</h4>
+                        <ul class="space-y-1.5 text-sm text-gray-500 dark:text-gray-400">
                             <li class="flex items-start gap-3">
                                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
-                                <span>Calle Maria Moliner esquina con calle Lausana,<br />50007 Zaragoza, España</span>
+                                <span class="text-xs md:text-sm">Calle Maria Moliner / Calle Lausana, 50007 Zaragoza</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <span class="material-symbols-outlined text-primary text-lg">call</span>
@@ -426,14 +430,14 @@
                             </li>
                             <li class="flex items-center gap-3">
                                 <span class="material-symbols-outlined text-primary text-lg">mail</span>
-                                <span>sofasjaviergarcia@gmail.com</span>
+                                <span class="text-xs md:text-sm">sofasjaviergarcia@gmail.com</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div
-                    class="border-t border-gray-100 dark:border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-xs text-gray-400">© 2023 Tapicería Artesana Zaragoza. Todos los derechos reservados.
+                    class="border-t border-gray-100 dark:border-gray-800 pt-4 flex flex-col md:flex-row justify-between items-center gap-3">
+                    <p class="text-[11px] md:text-xs text-gray-400">© 2023 Tapicería Artesana Zaragoza. Todos los derechos reservados.
                     </p>
                     <div class="flex gap-4">
                         <span class="text-gray-400 cursor-default" title="Facebook">
